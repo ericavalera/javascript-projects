@@ -1,11 +1,27 @@
-// Declare and assign the variables below
+//Declare and assign a variable for each item in the Data Table above.
+let spaceShuttle="Determination";
+let shuttleSpeed= 17500;
+let distToMarsKm= 225000000;
+let distToMoonKm= 384400;
+let milesPerKilo= 0.621;
 
-// Use console.log to print the 'typeof' each variable. Print one item per line.
+//For each variable you declared in part A, use the typeof operator to print its type to the console, one item per line.
+console.log(typeof spaceShuttle);
+console.log(typeof shuttleSpeed);
+console.log(typeof distToMarsKm);
+console.log(typeof distToMoonKm);
+console.log(typeof milesPerKilo);
 
-// Calculate a space mission below
+//Mars Mission
+let milesToMars= distToMarsKm * milesPerKilo;
+let hoursToMars= milesToMars / shuttleSpeed;
+let daysToMars= hoursToMars/ 24;
+console.log(spaceShuttle +" will take "+ daysToMars+ " days to reach Mars.")
 
-// Print the results of the space mission calculations below
+//Moon Mission
+let milesToMoon= distToMoonKm * milesPerKilo;
+let hoursToMoon= milesToMoon/ shuttleSpeed;
+let daysToMoon= hoursToMoon/ 24;
+console.log(spaceShuttle+" will take "+ daysToMoon+ "days to reach the Moon.")
 
-// Calculate a trip to the moon below
 
-// Print the results of the trip to the moon below
