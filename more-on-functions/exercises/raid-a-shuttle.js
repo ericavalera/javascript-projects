@@ -54,4 +54,46 @@ console.log("Hold status: " + holdStatus(cargoHold));
 //b). Call your anonymous fuel and cargo functions from within irs.
 
 //c). Use a template literal to return, "Raided _____ kg of fuel from the tanks, and stole ____ and ____ from the cargo hold."
+*/
+let sea= (function(fuel){
+  if(checkFuel(fuel)==="green"){
+    return fuel-100001;
+  } else if(checkFuel(fuel)==="yellow"){
+    return fuel-50001;
+  }else{
+    return fuel;
+  }
 
+});
+
+console.log(sea(200000))
+
+
+let seaShip= function(cargo){
+ let myArr=[];
+ for(let i=0;i < cargo.length; i++){
+    if (cargo[i]==="gold" || cargo[i]==="space suits"){
+     myArr.push(cargo[i]);
+    }
+  }
+
+   return myArr;
+
+};
+console.log(seaShip(cargoHold));
+ 
+
+let irs = function(fuelLevel, cargoHold) {
+  let things = seaShip(cargoHold);
+  return `Raided ${sea(fuelLevel)} kg of fuel from the tanks, and stole ${things[0]} and ${things[1]} from the cargo hold.`;
+};
+console.log(irs(fuelLevel,cargoHold));
+
+
+
+let replace= function(newCargo){
+  newCargo.splice(1,1,"underwear").push();
+  newCargo.splice(4,1,"socks").push();
+ return newCargo;
+  };
+  console.log(replace(cargoHold));
