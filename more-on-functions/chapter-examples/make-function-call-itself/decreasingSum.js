@@ -7,3 +7,4 @@ function decreasingSum(integer) {
 }
 
 console.log(decreasingSum(5));
+

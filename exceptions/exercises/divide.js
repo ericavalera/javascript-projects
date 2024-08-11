@@ -12,3 +12,4 @@ function divide (numerator,denominator){
     }
     return numerator/ denominator;
 };
+console.log(divide(4,0))

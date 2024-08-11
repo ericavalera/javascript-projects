@@ -27,7 +27,7 @@ while(!fuelLevel){
   
   while(!astronautNum){
     astronautNum= input.question("Enter astronaut number: ");
-    if(astronautNum < 7){
+    if(astronautNum <= 7){
       astronautNum=true;
       break;
     } 
@@ -39,10 +39,12 @@ while(!fuelLevel){
   
 //c. Use a final loop to monitor the fuel status and the altitude of the shuttle. Each iteration, decrease the fuel level by 100 units for each astronaut aboard. Also, increase the altitude by 50 kilometers.
 
-while (fuelLevel >= 0) {
+while (fuelLevel >= 0 ) {
   
   shuttleAlt += 50;
   fuelLevel -= 100 * astronautNum;
+  console.log(shuttleAlt);
+  console.log(fuelLevel);
   
   }
 /*Exercise #5: Output the result with the phrase, “The shuttle gained an altitude of ___ km.”

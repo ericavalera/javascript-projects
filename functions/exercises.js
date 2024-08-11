@@ -5,7 +5,7 @@ function makeLine(size){
 }
     return line;
 }
-console.log(makeLine(5));
+console.log(makeLine(5) +'\n');
 
 function makeSquare(size){
 square="";
@@ -14,6 +14,7 @@ for(let i=0; i < size; i++){
 }
 return square;
 }
+
 console.log(makeSquare(5));
 
 function makeRectangle(height,width){
@@ -25,35 +26,12 @@ function makeRectangle(height,width){
 }
 console.log(makeRectangle(5,3));
 
-function makeDownstairs(size){
-    downstairs="";
-    for(let i=0; i < size; i++){
-        downstairs+=makeLine(i+1) +'\n';
-    } return downstairs.slice(0,-1);
-}
-console.log(makeDownstairs(5));
-
-function makeSpaceLine(numSpaces, numChar, hash){ 
-    hash="#";
-    return " ".repeat(numSpaces) + hash.repeat(numChar) + " ".repeat(numSpaces);
-}
-console.log(makeSpaceLine(3, 5));
-
-function makePyramid(height){
-    pyramid= "";
-    for(let i=0; i< height; i++){
-    pyramid+= (makeSpaceLine(height - i - 1, 2*i + 1) + "\n");
+function makeDownwardStairs(height){
+    triangle="";
+    for(let i = 0; i < height; i++){
+        triangle+= makeLine(height)+ "\n";
     }
-    return pyramid.slice(0,-1);
-} 
-console.log(makePyramid(5))
+    return triangle;
 
-function makeDiamond(height){
-    diamondTop="";
-    diamondBottom=""
-    for (let i= 0; i < height; i++){
-     diamondTop+= makePyramid(height);
-     diamondBottom+=diamondTop.split("\n").slice(0,-1).reverse().join("\n");
-      return diamondTop +"\n"+ diamondBottom;
-    } 
-} console.log(makeDiamond(5));
+}
+console.log(makeDownwardStairs(5));

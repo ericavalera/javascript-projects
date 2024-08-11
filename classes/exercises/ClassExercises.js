@@ -23,7 +23,7 @@ class Manual extends Book {
     constructor(title, author, copyrightDate, isbn, pageNum, checkout, discarded){
         super (title, author, copyrightDate, isbn, pageNum, checkout, discarded)
     }
-    bye  = function (year){
+    remove = function (year){
         if(year - this.copyrightDate > 5){
             return this.discarded= "yes";
         }
@@ -34,7 +34,7 @@ class Novel extends Book {
     constructor(title, author, copyrightDate, isbn, pageNum, checkout, discarded){
         super(title, author, copyrightDate, isbn, pageNum, checkout, discarded)
     }
- bye = function (){
+ remove = function (){
         if (this.checkout > 100){
             return this.discarded= "yes";
         }
@@ -48,7 +48,7 @@ let topSecretShuttleBuildingManual = new Manual ("Top Secret Shuttle Building Ma
 // Code exercises 4 & 5 here:
 
 prideAndPrejudice.checkout+= 5;
-topSecretShuttleBuildingManual.bye(2024)
+topSecretShuttleBuildingManual.remove(2024)
 
 console.log(topSecretShuttleBuildingManual)
 console.log(prideAndPrejudice)

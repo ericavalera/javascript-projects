@@ -74,8 +74,10 @@ function fitnessTest(array){
       while(steps< 20){
         steps += array[i].move();
         turns += 1;
-      }raceResults.push(`${array[i].name} took ${turns} turns to take 20 steps.`);
-   }return raceResults;
+      }
+      raceResults.push(`${array[i].name} took ${turns} turns to take 20 steps.`);
+   }
+   return raceResults;
 }
 console.log(fitnessTest(crew));
 

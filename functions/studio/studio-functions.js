@@ -91,3 +91,4 @@ function areaOfRectangle(l , w = l){
 }
 console.log(`the area of this rectangle is ${areaOfRectangle(3,4)}`);
 console.log(`the area of this square is ${areaOfRectangle(20)}`);
+
