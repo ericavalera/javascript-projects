@@ -13,9 +13,9 @@ window.addEventListener ("load", function (){
             <div class="bio">
                 <h3>${astroData.firstName} ${astroData.lastName} </h3>
                 <ul>
-                <li>${astroData.hoursInSpace}</li>
-                <li>${astroData.active}</li>
-                <li>${astroData.skills}</li>
+                <li>Hours in Space: ${astroData.hoursInSpace}</li>
+                <li>Active: ${astroData.active}</li>
+                <li>Skills: ${astroData.skills.join(", ")}</li>
                 </ul>
             </div>
             <img class="avatar" src="${astroData.picture}">
@@ -23,8 +23,6 @@ window.addEventListener ("load", function (){
         }
        
     
-           
-
         } 
         astronauts();
     });
